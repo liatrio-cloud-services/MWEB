@@ -8,7 +8,7 @@ CSV.foreach("#{Dir.pwd}/commits.csv") do |row|
   while counter < times do
     `echo \"triggering a commit\" >> test.txt`
     `git add .`
-    `git commit -m \"finished #{row[0]}\"`
+    `git commit -m \"#{row[0]}\"`
     counter += 1
   end
 
